@@ -29,3 +29,6 @@ RUN set -x \
     && apt-get -yqq dist-upgrade \
     && apt-get clean
 CMD ["bash"]
+echo "mkdir -m $dirmode -p --$4"
+exec autoupdate mkdir -m"autodirmode" -p | apt-get upgradedb
+else
